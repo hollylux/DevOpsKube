@@ -11,7 +11,9 @@ import (
 const port = ":9999"
 
 func sayHello(res http.ResponseWriter, req *http.Request) {
-	cur := time.Now().Format(time.RFC3339)
+	loc, _ := time.LoadLocation("Asia/Beijing") // "America/New_York"
+	cur := time.Now().In(loc).Format(time.RFC3339)
+
 	hostname, err := os.Hostname()
 	if err != nil {
 		hostname = "Unknown!"
