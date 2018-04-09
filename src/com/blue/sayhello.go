@@ -19,7 +19,7 @@ func sayHello(res http.ResponseWriter, req *http.Request) {
 
 	msg := req.URL.Path
 	msg = strings.TrimPrefix(msg, "/")
-	msg = cur + ": Hello " + msg + " from " + hostname + ". By Bruce using Go lang"
+	msg = cur + ": " + msg + " from " + hostname + ". By Bruce using Go lang"
 
 	fmt.Println(msg)
 
