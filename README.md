@@ -5,6 +5,7 @@
 * Source code hosted on github
 
 * CICD files
+    /root/.jenkins/workspace/DevOpsKube/
     cd ~/blws/DevOpsKube
     Go build
         go build --tags netgo --ldflags '-extldflags "-lm -lstdc++ -static"' -o bin/sayhello src/com/blue/sayhello.go
