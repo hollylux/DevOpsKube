@@ -14,7 +14,7 @@ func sayHello(res http.ResponseWriter, req *http.Request) {
 	cur := time.Now().Format("01/02-15:04:05")
 	hostname, err := os.Hostname()
 	if err != nil {
-		hostname = "Unknown"
+		hostname = "Unknown!"
 	}
 
 	msg := req.URL.Path
