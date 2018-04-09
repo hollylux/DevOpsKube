@@ -1,5 +1,5 @@
 FROM scratch
-LABEL author=BruceLu version=1.0
+LABEL author=BruceLu
 COPY bin/sayhello /
 CMD ["/sayhello"]
 
