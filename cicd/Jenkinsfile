@@ -11,10 +11,9 @@ pipeline {
         }
         stage('Deliver') {
             steps {
-                sh 'echo deliver in progress'
+                sh './cicd/scripts/delivery.sh'
             }
         }
-
     }
 
     post {
