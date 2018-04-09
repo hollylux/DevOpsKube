@@ -1,0 +1,31 @@
+pipeline {
+    agent any
+    environment {
+        CI = 'true'
+    }
+    stages {
+        stage('Build') {
+            steps {
+                sh './cicd/scripts/build.sh'
+            }
+        }
+        stage('Deliver') {
+            steps {
+                sh 'echo deliver in progress'
+            }
+        }
+
+    }
+
+    post {
+        always {
+            echo 'Post pipeline'
+        }
+        success {
+            echo 'Pipeline with a success'
+        }
+        failure {
+            echo 'Pipelien failed'
+        }
+    }
+}

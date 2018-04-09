@@ -1,6 +1,7 @@
 #!/bin/bash
 
-go build -o bin/sayhello src/com/blue/sayhello.go
-docker build -f cicd/Dockerfile -t brucelu/gosayhello
+go build --tags netgo --ldflags '-extldflags "-lm -lstdc++ -static"' -o bin/sayhello src/com/blue/sayhello.go
+docker build -t brucelu/gosayhello -f cicd/Dockerfile .
+docker push brucelu/gosayhello
 
 exit 0
