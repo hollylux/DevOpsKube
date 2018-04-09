@@ -16,12 +16,12 @@ func sayHello(res http.ResponseWriter, req *http.Request) {
 
 	hostname, err := os.Hostname()
 	if err != nil {
-		hostname = "Unknown!"
+		hostname = "Unknown"
 	}
 
 	msg := req.URL.Path
 	msg = strings.TrimPrefix(msg, "/")
-	msg = cur + "t1: " + msg + " from " + hostname + ". By Bruce using Go lang"
+	msg = cur + "v1: " + msg + " from " + hostname + ". By Bruce using Go lang"
 
 	fmt.Println(msg)
 
