@@ -1,5 +1,6 @@
 FROM scratch
 LABEL author=BruceLu
-COPY bin/sayhello /
 CMD ["/sayhello"]
+COPY bin/sayhello /
+COPY src/com/blue/sayhello.go /
 
