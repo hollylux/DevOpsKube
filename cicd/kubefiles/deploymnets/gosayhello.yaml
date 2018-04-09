@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gosayhello-deployment
+  labels:
+    app: gosayhello
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: gosayhello
+  template:
+    metadata:
+      labels:
+        app: gosayhello
+    spec:
+      containers:
+      - name: gosayhello
+        image: brucelu/gosayhello:latest
+        ports:
+        - containerPort: 9999

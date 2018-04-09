@@ -1,0 +1,13 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: "gosayhello"
+spec:
+  selector:
+    app: "gosayhello"
+  ports:
+    - protocol: "TCP"
+      port: 9999
+      targetPort: 9999
+      nodePort: 31000
+  type: NodePort

@@ -19,6 +19,7 @@
 
     Jenkinsfile
     Scripts
+        chmod 755 cicd/scripts/build.sh
     Docker
         docker run --rm -it -p 9999:9999 30b225a87eb0
 
