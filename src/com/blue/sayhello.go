@@ -11,7 +11,7 @@ import (
 const port = ":9999"
 
 func sayHello(res http.ResponseWriter, req *http.Request) {
-	loc, _ := time.LoadLocation("Asia/Beijing") // "America/New_York"
+	loc, _ := time.LoadLocation("Asia/Shanghai") // "America/New_York"
 	cur := time.Now().In(loc).Format(time.RFC3339)
 
 	hostname, err := os.Hostname()
@@ -21,7 +21,7 @@ func sayHello(res http.ResponseWriter, req *http.Request) {
 
 	msg := req.URL.Path
 	msg = strings.TrimPrefix(msg, "/")
-	msg = cur + "v1: " + msg + " from " + hostname + ". By Bruce using Go lang"
+	msg = cur + " : " + msg + " from " + hostname + ". By Bruce using Go lang. v1"
 
 	fmt.Println(msg)
 
