@@ -31,7 +31,7 @@ spec:
       containers:
       - name: gosayhello
         image: brucelu/gosayhello
+        imagePullPolicy: Always
         ports:
         - containerPort: 9999
-        imagePullPolicy: Always
       
