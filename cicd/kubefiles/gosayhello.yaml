@@ -33,4 +33,5 @@ spec:
         image: brucelu/gosayhello:latest
         ports:
         - containerPort: 9999
-      imagePullPolicy: Always
+        imagePullPolicy: Always
+      
