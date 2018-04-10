@@ -6,12 +6,12 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh './cicd/scripts/build.sh'
+                sh './src/ci/scripts/build.sh'
             }
         }
         stage('Deliver') {
             steps {
-                sh './cicd/scripts/delivery.sh'
+                sh './src/ci/scripts/delivery.sh'
             }
         }
     }
