@@ -1,0 +1,3 @@
+# Not sending unnecessary files to docker build context
+src
+README.md
