@@ -22,7 +22,7 @@ func sayHello(res http.ResponseWriter, req *http.Request) {
 
 	msg := req.URL.Path
 	msg = strings.TrimPrefix(msg, "/")
-	msg = cur + " : " + msg + " from " + hostname + ". By Bruce using Go lang. v14"
+	msg = cur + " : <strong>" + msg + "</strong> from " + hostname + ". By Bruce using Go lang. v14"
 
 	fmt.Println(msg)
 
